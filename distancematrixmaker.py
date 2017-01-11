@@ -12,10 +12,10 @@ class matrixmaker():
         self.locations = locations
     def matrix(self):
         ssl._create_default_https_context = ssl._create_unverified_context
-	myapikey= "AIzaSyBsp23PEp2QZEdaUMRjFNrWjzAMzt6BqOI"
+	YOUR_API_KEY= "PLEASE PLACE YOUR GOOGLE API KEY HERE"
         loc = "Vancouver+BC|Seattle|San+Francisco|Victoria+BC"
         loc = self.locations
-        urlstring = "https://maps.googleapis.com/maps/api/distancematrix/json?origins="+loc+"&destinations="+loc+"&key=YOUR_API_KEY"
+        urlstring = "https://maps.googleapis.com/maps/api/distancematrix/json?origins="+loc+"&destinations="+loc+"&key="+YOUR_API_KEY
         c = urlstring[0:len(urlstring)-12] +myapikey
 	print c
 
